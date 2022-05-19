@@ -264,7 +264,7 @@ a {
     padding: 25px;
     display: grid;
     grid-template-columns: repeat(3, 300px);
-    grid-template-rows: repeat(2, 450px);
+    grid-template-rows: repeat(2, 1fr);
     justify-content: center;
     gap: 50px;
 }
@@ -285,8 +285,14 @@ a {
     font-size: var(--h2-font-size);
 }
 
+.services__card__div {
+    padding: 0 0 0 20px;
+    margin: auto;
+}
+
 .services__card__list {
-    list-style: none;
+    text-align: left;
+    /* list-style: none; */
 }
 
 
