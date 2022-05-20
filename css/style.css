@@ -333,6 +333,10 @@ a {
     text-align: left;
 }
 
+.services__card__list p{
+    margin: 0 0 0 -20px;
+} 
+
 
 /*==================== FAQ ====================*/
 
@@ -526,7 +530,7 @@ input:checked~label .cross:after {
 
 /* For small devices */
 
-@media screen and (min-device-width:10px) {
+@media screen and (min-width:10px) {
     .section {
         padding: 2rem;
     }
@@ -555,7 +559,7 @@ input:checked~label .cross:after {
 
 /* For medium devices */
 
-@media screen and (min-device-width:568px) {
+@media screen and (min-width:568px) {
     .section {
         padding: 5rem;
     }
@@ -582,7 +586,7 @@ input:checked~label .cross:after {
     }
 }
 
-@media screen and (min-device-width:768px) {
+@media screen and (min-width:768px) {
     .section {
         padding: 7.5rem;
     }
@@ -600,7 +604,7 @@ input:checked~label .cross:after {
 
 /* For large devices */
 
-@media screen and (min-device-width: 1024px) {
+@media screen and (min-width: 1024px) {
     .section {
         padding: 10rem;
     }
