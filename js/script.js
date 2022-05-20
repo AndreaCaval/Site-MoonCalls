@@ -2,7 +2,7 @@
 let mybutton = document.getElementById("scroll-up");
 
 // When the user scrolls down 20px from the top of the document, show the button
-window.onscroll = function() {
+window.onscroll = function () {
     scrollFunction();
 };
 
@@ -58,4 +58,16 @@ function uncheck() {
         });
         this.classList.add('open')
     }
+}
+
+
+
+function menuToggle() {
+    document.getElementById("myNav").style.width == "100%" ?
+        document.getElementById("myNav").style.width = "0%" :
+        document.getElementById("myNav").style.width = "100%";
+}
+
+function closeNav() {
+    document.getElementById("myNav").style.width = "0%";
 }

@@ -10,6 +10,7 @@
 
     <!--==================== CSS ====================-->
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animation.css">
 
     <!--==================== UNICONS ====================-->
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
@@ -18,18 +19,34 @@
 <body>
 
 
+    <!--==================== BACKGROUND ANIMATION ====================-->
+    <!-- <div class="background-container">
+        <img class="moon" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/moon2.png" alt="">
+        <div class="stars"></div>
+        <div class="twinkling"></div>
+        <div class="clouds"></div>
+    </div> -->
+
+    <div id="myNav" class="overlay">
+        <div class="overlay-content">
+            <a href="#home" class="nav__link" onclick="closeNav()">Home</a>
+            <a href="#services" class="nav__link" onclick="closeNav()">Services</a>
+            <a href="#faq" class="nav__link" onclick="closeNav()">FAQ</a>
+            <a id="dashboard" onclick="closeNav()" href="https://moon-calls.hyper.co/" target="_blank" class="nav__link">Dashboard</a>
+        </div>
+      </div>
+
     <!--==================== HEADER ====================-->
 
     <header class="header" id="header">
+        
         <nav class="nav">
-            <!-- <a href="#" class="nav__logo">Moon Calls</a> -->
+            <i class="uil uil-bars" id="menuToggle" onclick="menuToggle()"></i>
 
             <a href="#home" class="nav__link">Home</a>
-            <!-- <a href="#about" class="nav__link">About</a> -->
             <a href="#services" class="nav__link">Services</a>
             <a href="#faq" class="nav__link">FAQ</a>
             <a id="dashboard" href="https://moon-calls.hyper.co/" target="_blank" class="nav__link">Dashboard</a>
-
         </nav>
     </header>
 
@@ -43,11 +60,16 @@
                     </a>
                     <br>
                     <p class="description">
-                        Moon Calls is a private & limited Alpha Group. It actually works as a real DAO, it's a self-sustainable & community-driven project where funds (from memberships) are constantly reinvested in the group itself, with the aim to improve the whole service
-                        so that the community can benefit from it. Always "community first" & "quality over quantity", this is Moon Calls.
+                        Moon Calls is a private & limited Alpha Group. It actually works as a real DAO, it's a
+                        self-sustainable & community-driven project where funds (from memberships) are constantly
+                        reinvested in the group itself, with the aim to improve the whole service
+                        so that the community can benefit from it. Always "community first" & "quality over quantity",
+                        this is Moon Calls.
                     </p>
                     <br><br>
-                    <a id="waiting-list" href="https://docs.google.com/forms/d/e/1FAIpQLSclOHyBr7YqQkG-q9MWouTpomHmf1bcJ89HG3dnakmGIgs99Q/viewform" target="_blank">Join Our Waiting List</a>
+                    <a id="waiting-list"
+                        href="https://docs.google.com/forms/d/e/1FAIpQLSclOHyBr7YqQkG-q9MWouTpomHmf1bcJ89HG3dnakmGIgs99Q/viewform"
+                        target="_blank">Join Our Waiting List</a>
 
                 </div>
                 <div class="home__logo">
@@ -140,59 +162,74 @@
                 <div class="wrap">
                     <input type="radio" id="tab-1" name="tabs">
                     <label for="tab-1">
-                        <div>Pricing / Memberships</div>
+                        <div>
+                            <p class="wrap__title">
+                                How much does a membership cost?</p>
+                        </div>
                         <div class="cross"></div>
                     </label>
                     <div class="wrap_content">
-                        <p>Currently we offer two kinds of membership/subscription (choice up to customers): </p>
-                        <p>-60€/monthly membership (monthly subscription)</p>
-                        <p>-100€/bimonthly membership (bimonthly subscription)</p>
-                        <p>The payment system is safely handled by Hyper Dashboard & Stripe and customers can easily manage subscriptions by themselves from their own dedicated page on the Dashboard.</p>
+                        <p>Currently we offer two kinds of membership/subscription (choice up to customers):</p>
+                        <p>・Monthly basis renewal ➞ 60€/monthly ➞ Pay 60€ every month</p>
+                        <p>・Bimonthly basis renewal ➞ 100€/bimonthly ➞ Pay 100€ every 2 months</p>
                     </div>
                 </div>
                 <div class="wrap">
                     <input type="radio" id="tab-2" name="tabs">
                     <label for="tab-2">
-                        <div>tab two</div>
+                        <div>
+                            <p class="wrap__title"> Is it safe to purchase a membership?</p>
+                        </div>
                         <div class="cross"></div>
                     </label>
-                    <div class="wrap_content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia autem quasi inventore unde nobis voluptatibus illum quae rerum laudantium minima, excepturi quis maiores. Eaque quae, nam delectus deserunt ipsum! Lorem ipsum dolor
-                        sit amet, consectetur adipisicing elit.</div>
+                    <div class="wrap_content">
+                        <p>The payment system is safely handled by Hyper Dashboard & Stripe and customers can easily
+                            manage subscriptions by themselves from their own dedicated page on the Dashboard.</p>
+                    </div>
                 </div>
                 <div class="wrap">
                     <input type="radio" id="tab-3" name="tabs">
                     <label for="tab-3">
-                        <div>tab three</div>
+                        <div>
+                            <p class="wrap__title">Which payment methods do you accept?</p>
+                        </div>
                         <div class="cross"></div>
                     </label>
-                    <div class="wrap_content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia autem quasi inventore unde nobis voluptatibus illum quae rerum laudantium minima, excepturi quis maiores. Eaque quae, nam delectus deserunt ipsum! Lorem ipsum dolor
-                        sit amet, consectetur adipisicing elit. </div>
+                    <div class="wrap_content">
+                        <p>At the moment the only payment method we can accept is Credit Card (every kind of Credit Card
+                            is accepted, also prepaid ones for whoever wants to fill even safer). Payment via Crypto
+                            might be added later in the future. </p>
+                    </div>
                 </div>
                 <div class="wrap">
                     <input type="radio" id="tab-4" name="tabs">
                     <label for="tab-4">
-                        <div>tab one</div>
+                        <div>
+                            <p class="wrap__title">Which is the difference between Moon Calls & other DAOs?</p>
+                        </div>
                         <div class="cross"></div>
                     </label>
-                    <div class="wrap_content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia autem quasi inventore unde nobis voluptatibus illum quae rerum laudantium minima, excepturi quis maiores. Eaque quae, nam delectus explicabo, deserunt ipsum!</div>
+                    <div class="wrap_content">
+                        <p>Moon Calls is a private group with a cap set to 100 members! This means that we care of & pay
+                            attention to literally every single member we have. </p>
+                        <p>One of our slogans is "quality over quantity": we don't want to be the typical DAO / Alpha
+                            Group open to everyone with 500-1000+ members where no importance is given to the single
+                            individual. We'd rather keep the group limited
+                            & private to offer a top quality service for whoever pays for it!</p>
+                    </div>
                 </div>
                 <div class="wrap">
                     <input type="radio" id="tab-5" name="tabs">
                     <label for="tab-5">
-                        <div>tab one</div>
+                        <div>
+                            <p class="wrap__title">Which platform do you use to provide your service/s?</p>
+                        </div>
                         <div class="cross"></div>
                     </label>
-                    <div class="wrap_content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia autem quasi inventore unde nobis voluptatibus illum quae rerum laudantium minima, excepturi quis maiores. Eaque quae, nam delectus explicabo, deserunt ipsum!</div>
-                </div>
-                <div class="wrap">
-                    <input type="radio" id="tab-6" name="tabs">
-                    <label for="tab-6">
-                        <div>tab one</div>
-                        <div class="cross"></div>
-                    </label>
-                    <div class="wrap_content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia autem quasi inventore unde nobis voluptatibus illum quae rerum laudantium minima, excepturi quis quasi inventore unde nobis voluptatibus illum quae rerum laudantium
-                        minima, excepturi quis quasi inventore unde nobis voluptatibus illum quae rerum laudantium minima, excepturi quis quasi inventore unde nobis voluptatibus illum quae rerum laudantium minima, excepturi quis quasi inventore unde nobis
-                        voluptatibus illum quae rerum laudantium minima, excepturi quis maiores. Eaque quae, nam delectus explicabo, deserunt ipsum!</div>
+                    <div class="wrap_content">
+                        <p>We provide all our services via Discord. Once purchased a membership you will also
+                            automatically (through the Dashboard) get access to our private Discord server.</p>
+                    </div>
                 </div>
             </div>
         </section>
@@ -206,12 +243,14 @@
             <div class="footer__container container grid">
                 <div class="footer__names">
                     <h1 class="footer__title">Moon Calls</h1>
-                    <p class="footer__subtitle">Private & limited group, covering SOL, ETH, NEAR, VeVe, Crypto, Airdrops and much more... </p>
+                    <p class="footer__subtitle">Private & limited group, covering SOL, ETH, NEAR, VeVe, Crypto, Airdrops
+                        and much more... </p>
                     <p class="footer__subtitle"> The only Alpha/DAO you'll ever need.</p>
                 </div>
 
                 <div class="footer__socials">
-                    <a href="https://www.twitter.com/Moon Calls_" target="_blank" class="footer__social" title="twitter">
+                    <a href="https://www.twitter.com/Moon Calls_" target="_blank" class="footer__social"
+                        title="twitter">
                         <i class="uil uil-twitter"></i>
                     </a>
                 </div>
