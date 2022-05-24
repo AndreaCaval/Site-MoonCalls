@@ -71,3 +71,16 @@ function menuToggle() {
 function closeNav() {
     document.getElementById("myNav").style.width = "0%";
 }
+
+
+
+
+function hideLoader() {
+    document.querySelector('#loading').style.display = "none";
+}
+
+window.onload = function () {
+    hideLoader();
+};
+
+setTimeout(hideLoader, 20 * 1000);

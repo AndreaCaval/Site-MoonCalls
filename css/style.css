@@ -84,6 +84,16 @@ a {
     font-size: var(--h1-font-size);
 }
 
+#loading {
+    background: url('../images/loading1.gif') no-repeat center center;
+    background-color: black;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 9999999;
+}
 
 /*==================== LAYOUT ====================*/
 
@@ -337,14 +347,14 @@ a {
     text-align: left;
 }
 
-.services__card__list p{
+.services__card__list p {
     margin: 0 0 0 -20px;
-} 
+}
 
 
 /*==================== FAQ ====================*/
 
-.faq{
+.faq {
     height: 100%;
 }
 
@@ -589,7 +599,7 @@ input:checked~label .cross:after {
         display: flex;
     }
 
-    #menuToggle{
+    #menuToggle {
         display: none;
     }
 }
