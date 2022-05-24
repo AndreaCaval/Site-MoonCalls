@@ -6,7 +6,8 @@
     --first-color-second: hsl(var(--hue-color), 30%, 8%);
     --title-color: hsl(var(--hue-color), 8%, 95%);
     --text-color: hsl(var(--hue-color), 8%, 75%);
-    --body-color: hsl(var(--hue-color), 79%, 5%);
+    /* --body-color: hsl(var(--hue-color), 79%, 5%); */
+    --body-color: hsl(240, 73%, 4%);
     --scroll-bar-color: hsl(var(--hue-color), 20%, 18%);
     --scroll-thumb-color: hsl(var(--hue-color), 69%, 61%);
     /* HSL color mode */
@@ -191,6 +192,9 @@ a {
 
 .home {
     justify-content: center;
+    background-image: url('../images/background1.gif');
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .logo__title {
