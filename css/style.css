@@ -510,15 +510,16 @@ input:checked~label .cross:after {
     right: 20px;
     display: none;
     text-align: center;
-    background-color: var(--first-color);
-    color: #fff;
+    background-color: var(--first-color-alt);
+    color: var(--text-color-light);
     border-radius: 50%;
     padding: 5px;
     transition: all 0.3s ease;
 }
 
 .scrollup:hover {
-    bottom: 60px;
+    color: #fff;
+    background-color: var(--first-color);
 }
 
 
